@@ -1,0 +1,48 @@
+.pr2 {
+    width: 99%;
+    margin-left: 0.5%;
+}
+#img1 {
+    height: 70%px;
+    width: 110px;
+    margin-left: 27%;
+    margin-top: 10%;
+    border: 3px solid gray;
+}
+#img2 {
+    height: 70%px;
+    width: 110px;
+    margin-left: 27%;
+    margin-top: 10%;
+    border: 3px solid gray;
+}
+#item {
+    border: 1px solid black;
+}
+#show-info {
+    display: inline-block;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-right: 3%;
+}
+#img-cont1 {
+    display: inline-block;
+}
+#img-cont2 {
+    display: inline-block;
+}
+#summary {
+    font-size: 15px;
+}
+#genres {
+    font-size: 12px;
+}
+#score {
+    font-size: 12px;
+    padding-left: 27%;
+}
+#link {
+    text-decoration: none;
+    color: black;
+    min-height: 200px;
+}

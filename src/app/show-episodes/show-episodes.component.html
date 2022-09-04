@@ -1,0 +1,14 @@
+<div *ngIf="episodes && episodes.length > 0">
+    <h3>Episodes</h3>
+    <div *ngFor="let episode of episodes">
+        <div>
+            <b class="e">S{{episode.season | numberP}}E{{episode.number | numberP}} {{episode.name}}</b>
+        </div>
+    </div>
+</div>
+<div *ngIf="!episodes || episodes.length === 0">
+    <h3>Episodes</h3>
+    <div>
+        <p class="e">No episodes info available</p>
+    </div>
+</div>

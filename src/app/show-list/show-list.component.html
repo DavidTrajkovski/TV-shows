@@ -1,0 +1,36 @@
+<div class="col-8 pr2" *ngIf='showsList'>
+    <div *ngFor='let show of showsList' id="item">
+        <a [routerLink]="['/shows',show.id]" class="row align-items- justify-content-center" id="link">
+            <div *ngIf='show.image && show.image.medium' id="img-cont1" class="col-3">
+                <div>
+                    <img src='{{show.image.medium}}' alt='Cover photo for show' id="img1">
+                </div>
+            </div>
+            <div *ngIf='!(show.image && show.image.medium)' id="img-cont2" class="col-3">
+                <div>
+                    <img id="img2" src="assets/noImg.png">
+                </div>
+            </div>
+            <div id="show-info" class="col-9">
+                <div class="row" id="nameAndscore">
+                    <div class="col-9">
+                        <h5>{{show.name}}</h5>
+                    </div>
+                    <div id="score-cont" class="col-3">
+                        <span id="score">Score: {{show.score}} </span>
+                    </div>
+                </div>
+                <p [innerHtml]='show.summary' id="summary"></p>
+                <div>
+                    <span id="genres">{{ show.genres | genre}}</span>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+<div class="col-8 pr2" *ngIf='showsList.length===0'>
+    <div>
+        <span>Please enter valid shows titles</span>
+    </div>
+</div>
+

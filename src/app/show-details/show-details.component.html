@@ -1,0 +1,54 @@
+<div *ngIf="!loading">
+    <div *ngIf='show' id="cont1">
+        <div >
+            <div>
+                <a href='{{show.url}}' id="showUrl"><h2> {{show.name}} </h2></a>
+            </div>
+            <div >
+                <div class="row" id="row">
+                    <div id="top1" class="col-3">
+                        <div *ngIf='show.image'>
+                            <div *ngIf='show.image.original' id="img1cont">
+                                <img src='{{show.image.original}}' id="orgImg">
+                            </div>
+                            <div *ngIf='!show.image.original' class="img2cont">
+                                <img class="fakeImg" src="assets/noImg.png" >
+                            </div>
+                        </div>
+                        <div *ngIf='!show.image'>
+                            <div  class="img2cont">
+                                <img class="fakeImg" src="assets/noImg.png" >
+                            </div>
+                        </div>
+                    </div>
+                    <div id="showSummaryDetails" class="col-9">
+                        <p *ngIf='show.summary' [innerHtml]="show.summary"></p>
+                        <p *ngIf='!show.summary || show.summary.length === 0 '>No summary available</p>
+                        <p *ngIf='show.rating.average'><b>Rating: </b>{{show.rating.average}}</p>
+                        <p *ngIf='!show.rating.average'><b>Rating: </b>No rating available</p>
+                        <p *ngIf='show.language'><b>Language:</b> {{show.language}} </p>
+                        <p *ngIf='!show.language || show.language.length === 0'><b>No language info</b></p>
+                        <p *ngIf='show.status'><b>Status:</b> {{show.status}} </p>
+                        <p *ngIf='!show.status'><b>No status info</b></p>
+                        <p *ngIf='show.genres && show.genres.length !== 0'><b>Genres:</b> {{show.genres | genre}}</p>
+                        <p *ngIf='!show.genres || show.genres.length === 0'><b>No genres info</b></p>
+                        <p *ngIf='show.premiered'><b>Premiered:</b> {{show.premiered | datumP}}</p>
+                        <p *ngIf='!show.premiered'><b>No premiere date info</b></p>
+                        <p *ngIf='show.officialSite'><b>Official Site: </b> <a href='{{show.officialSite}}' target='_blank'>Link</a></p>
+                        <p *ngIf='!show.officialSite'><b>No official site info </b></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='flex flex-row row' id="CE">
+            <app-show-cast [showId]='show.id' class='col-9'></app-show-cast>
+            <app-show-episodes [showId]='show.id' class='col-3'></app-show-episodes>
+        </div>
+    </div>
+    <div *ngIf='!show'>
+        <p>There is no show with this ID!</p>
+    </div>
+</div>
+<div *ngIf="loading" id="loadingImg">
+    <img id="limg" src="./assets/loading.gif">
+</div>

@@ -1,0 +1,50 @@
+#showUrl {
+    text-decoration: none;
+}
+#row {
+    max-height: 100%;
+}
+#top1 {
+    height: 200px;
+}
+#showSummaryDetails {
+    font-size: 12px;
+    padding-right: 2%;
+}
+#img1cont {
+    min-height: 180px;
+}
+#orgImg {
+    max-width: 80%;
+    max-height: 90%;
+    margin-left: 12%;
+    margin-right: 10%;
+    margin-top: 2%;
+    display: block;
+    border: 3px solid gray;
+}
+.img2cont {
+    min-height: 200px;
+}
+.fakeImg {
+    max-width: 70%;
+    max-height: 70%;
+    margin-left: 12%;
+    margin-right: 10%;
+    margin-top: 2%;
+    display: block;
+    border: 3px solid gray;
+}
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#CE {
+    margin-top: 2%;
+}
+#limg {
+    height: 100px;
+    width: 100px;
+    margin: auto;
+}

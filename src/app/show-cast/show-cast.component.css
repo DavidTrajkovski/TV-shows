@@ -1,0 +1,40 @@
+#castImg {
+    margin-top: 3%;
+    height: 160px;
+    width: 110px;
+    border-radius: 5px;
+    border: 5px solid lightgrey;
+}
+#charImg {
+    margin-top: 3%;
+    height: 160px;
+    width: 110px;
+    border-radius: 5px;
+    border: 5px solid lightgrey;
+}
+.fakedImg {
+    margin-top: 3%;
+    height: 160px;
+    width: 110px;
+    border-radius: 5px;
+    border: 5px solid lightgrey;
+}
+#actor {
+    margin-top: 3%;
+}
+#character {
+    margin-top: 3%;
+}
+#actorName {
+    width: max-width;
+}
+#charName {
+    width: max-width;
+}
+#a {
+    font-size: 14px;
+}
+#c {
+    font-size: 14px;
+}
+

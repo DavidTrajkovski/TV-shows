@@ -1,0 +1,44 @@
+<div *ngIf="casts" class="row">
+    <div class="col-6" id="castsCont">
+        <h3 id="castTitle">Cast</h3>
+        <div *ngIf='casts.length !== 0'>
+            <div *ngFor="let cast of casts" class="row" id="actor">
+                <div class="col-5" *ngIf='cast.person?.image?.medium'>
+                    <img id="castImg" src='{{cast.person?.image?.medium}}'>
+                </div>
+                <div class="col-5" *ngIf='!cast.person?.image?.medium'>
+                    <img class="fakedImg" src="assets/noImg.png">
+                </div>
+                <div class="col-7" id="actorName">
+                    <b id="a">{{cast.person?.name}}</b>
+                </div>
+            </div>
+        </div>
+        <div *ngIf='casts.length === 0'>
+            <div>
+                <p>No cast info available</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-6" id="charactersCont">
+        <h3 id="charTitle">Character</h3>
+        <div *ngIf='casts.length !== 0'>
+            <div *ngFor="let cast of casts" class="row" id="character">
+                <div class="col-5" *ngIf='cast.character?.image?.medium'>
+                    <img id="charImg" src='{{cast.character?.image?.medium}}'>
+                </div>
+                <div class="col-5" *ngIf='!cast.character?.image?.medium'>
+                    <img class="fakedImg" src="assets/noImg.png">
+                </div>
+                <div class="col-7" id="charName">
+                    <b id="c">{{cast.character?.name}}</b>
+                </div>
+            </div>
+        </div>
+        <div *ngIf='casts.length === 0'>
+            <div>
+                <p>No character info available</p>
+            </div>
+        </div>
+    </div>
+</div>

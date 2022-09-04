@@ -1,0 +1,13 @@
+<div class="col-8" id="da">
+    <input type="text" id="searchBar" placeholder="Find show..." [formControl]='searchText'>
+    <button type="button" id="searchbtn" class="btn btn-primary btn-sm"
+    (click)='searchShows(searchText.value)'>Search</button>
+</div>
+<div *ngIf="loading" id="loadingCont">
+    <img id="loading" src="./assets/loading.gif">
+</div>
+<div *ngIf="!loading">
+    <app-show-list [showsList]="shows"></app-show-list>
+</div>
+
+
